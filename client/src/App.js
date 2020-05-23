@@ -4,8 +4,7 @@ import './App.css';
 import axios from 'axios';
 import Table from './Table';
 
-const validNameRegex1 = /^((?!a)[\s\S])*$/;
-const validNameRegex2 = /^((?!A)[\s\S])*$/;
+const validNameRegex = /^((?!a|A)[\s\S])*$/;
 
 const validateForm = (errors) => {
   let valid = true;
@@ -44,10 +43,7 @@ class App extends Component {
 
     switch (name) {
       case 'name':
-        errors.name =
-          !validNameRegex1.test(value) || !validNameRegex2.test(value)
-            ? 'Name can not have an A or a'
-            : '';
+        errors.name = !validNameRegex.test(value) ? 'Name can not have an A or a' : '';
         break;
     }
 
@@ -63,6 +59,8 @@ class App extends Component {
 
   handleSubmit = e => {
     console.log('submitting...');
+
+    e.preventDefault();
 
     if (validateForm(this.state.errors)) {
       console.info('Valid Form')
