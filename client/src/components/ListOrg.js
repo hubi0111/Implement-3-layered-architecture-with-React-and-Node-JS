@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Table from './Table';
 
-class GetOrg extends Component {
+class ListOrg extends Component {
     constructor(props) {
       super(props);
   
@@ -31,4 +31,4 @@ class GetOrg extends Component {
     }
   }
   
-  export default GetOrg;
+  export default ListOrg;

@@ -29,9 +29,9 @@ module.exports = (app) => {
 
   var org = require('./controllers/orgController');
 
-  app.post('/org', org.create);
+  app.post('/createorg', org.create);
 
-  app.get('/org', org.findAll);
+  app.get('/listorg', org.findAll);
 }
 
 var config = require('./config');

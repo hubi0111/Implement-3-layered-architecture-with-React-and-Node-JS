@@ -11,7 +11,7 @@ const validateForm = (errors) => {
   return valid;
 }
 
-class SubmitOrg extends Component {
+class CreateOrg extends Component {
   constructor(props) {
     super(props);
 
@@ -131,4 +131,4 @@ class SubmitOrg extends Component {
   }
 }
 
-export default SubmitOrg;
+export default CreateOrg;

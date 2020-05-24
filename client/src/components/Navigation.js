@@ -9,7 +9,7 @@ const Navigation = () => {
           <br/>
           <NavLink to="/submit">Submit New</NavLink>
           <br/>
-          <NavLink to="/getOrg">Get All</NavLink>
+          <NavLink to="/listOrg">List All</NavLink>
        </div>
     );
 }

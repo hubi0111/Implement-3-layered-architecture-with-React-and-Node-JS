@@ -4,8 +4,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import Home from './components/Home';
-import GetOrg from './components/GetOrg';
-import SubmitOrg from './components/SubmitOrg';
+import ListOrg from './components/ListOrg';
+import CreateOrg from './components/CreateOrg';
 import Navigation from './components/Navigation';
 
 class App extends Component {
@@ -16,8 +16,8 @@ class App extends Component {
           <Navigation />
             <Switch>
              <Route path="/" component={Home} exact/>
-             <Route path="/submit" component={SubmitOrg}/>
-             <Route path="/getOrg" component={GetOrg}/>
+             <Route path="/submit" component={CreateOrg}/>
+             <Route path="/listOrg" component={ListOrg}/>
            </Switch>
         </div> 
       </BrowserRouter>
