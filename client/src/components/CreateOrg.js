@@ -53,25 +53,28 @@ class CreateOrg extends Component {
     e.preventDefault();
 
     if (validateForm(this.state.errors)) {
-      console.info('Valid Form')
+      console.info('Valid Form');
+      const { name, address, type } = this.state;
+
+      const org = {
+        name,
+        address,
+        type,
+      };
+
+      axios
+        .post('http://localhost:9000/createorg', org)
+        .then(() =>
+          console.log('Organization Created'),
+          this.props.history.push('/listOrg')
+        )
+        .catch(err => {
+          console.error(err);
+        });
     } else {
       console.error('Invalid Form')
     }
 
-    const { name, address, type } = this.state;
-
-    const org = {
-      name,
-      address,
-      type,
-    };
-
-    axios
-      .post('http://localhost:9000/org', org)
-      .then(() => console.log('Organization Created'))
-      .catch(err => {
-        console.error(err);
-      });
   };
 
   render() {

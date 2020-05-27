@@ -11,7 +11,7 @@ class ListOrg extends Component {
     }
   
     componentDidMount() {
-      fetch("http://localhost:9000/org")
+      fetch("http://localhost:9000/listorg")
         .then(res => res.json())
         .then(response => this.setState({ response }));
     }
